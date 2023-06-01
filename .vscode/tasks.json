@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build 🔨",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",
+                "-std=gnu++17",
+                "${file}",
+                "-o",
+                "./out/${fileBasenameNoExtension}",
+                "-lm"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            // "group": "build",
+            // "detail": "Compiler: /usr/bin/g++"
+        }
+    ]
+}
